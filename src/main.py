@@ -5,6 +5,8 @@ from pathlib import Path
 
 from .config import load_options
 from .interface import TerminalWindow, cli
+from .loaders import load_vfs
+from .services import install as install_services
 from .settings import GUI
 from .shell import Shell
 from .startup import run_script
@@ -13,7 +15,10 @@ from .startup import run_script
 def create_shell(options):
     """Create a configured prototype session."""
     name = Path(options.vfs).name if options.vfs else "default"
-    return Shell(name)
+    shell = Shell(name)
+    shell.vfs = load_vfs(options.vfs)
+    install_services(shell, options.vfs)
+    return shell
 
 
 def run(options):

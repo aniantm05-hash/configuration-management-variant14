@@ -1,0 +1,6 @@
+# Этап 3: успешные команды
+ls
+cd /
+vfs-info
+vfs-init
+exit
