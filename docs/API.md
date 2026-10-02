@@ -1,6 +1,10 @@
 # Функции и классы
 
 
+## config.py
+
+- `load_options` — Parse the VFS path, startup script, and batch flag.
+
 ## interface.py
 
 - `cli` — Read terminal commands until exit, EOF, or an interrupt.
@@ -13,7 +17,9 @@
 
 ## main.py
 
-- `main` — Start the variant's CLI or GUI session.
+- `create_shell` — Create a configured prototype session.
+- `run` — Display options and startup dialogue in the selected interface.
+- `main` — Handle input/configuration errors with a nonzero process status.
 
 ## parsing.py
 
@@ -28,3 +34,8 @@
 - `Shell.stub_ls` — Show the ls prototype invocation.
 - `Shell.stub_cd` — Show the cd prototype invocation and reject extra operands.
 - `Shell.exit_command` — End the session after validating arguments.
+
+## startup.py
+
+- `remove_comment` — Strip Python-style comments outside quoted strings.
+- `run_script` — Echo commands, report line numbers, and respect exit and errors.

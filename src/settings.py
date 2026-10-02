@@ -3,3 +3,5 @@
 VARIANT = 14
 GUI = True
 HOST_PROMPT = True
+STOP_ON_ERROR = False
+COMMENTS = True
