@@ -1,0 +1,19 @@
+# Этап 5: владелец меняется только в виртуальных метаданных
+ls -l /readme.txt
+vfs-info
+chown anna /readme.txt
+ls -l /readme.txt
+chown anna:students /readme.txt /motd
+ls -l /motd
+chown -R team:students /docs
+ls -l /docs
+ls -l /docs/notes/deep
+cd /docs/notes/deep
+chown student info.txt
+ls -l info.txt
+cd
+vfs-info
+chown -R admin:users /
+ls -al
+vfs-info
+exit

@@ -8,3 +8,4 @@ STOP_ON_ERROR = False
 COMMENTS = True
 SERVICES = ["vfs-info", "vfs-init"]
 BASIC = ["tail", "who", "wc"]
+EXTRA = ["chown"]

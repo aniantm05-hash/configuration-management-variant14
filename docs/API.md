@@ -51,6 +51,12 @@
 - `run` - Display options and startup dialogue in the selected interface.
 - `main` - Handle input/configuration errors with a nonzero process status.
 
+## mutations.py
+
+- `install` - Register only the mutating commands assigned to this variant.
+- `chown` - Set owner[:group], optionally recursively with -R.
+- `metadata_targets` - Validate all metadata targets before applying any changes.
+
 ## parsing.py
 
 - `parse` - Return command tokens without interpreting quotes or variables.

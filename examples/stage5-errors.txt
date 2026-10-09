@@ -1,0 +1,11 @@
+# При ошибке ни один из указанных узлов не изменяется
+chown
+chown anna
+chown :students /readme.txt
+chown anna: /readme.txt
+chown -Z anna /readme.txt
+chown anna /missing
+chown anna /readme.txt /missing
+ls -l /readme.txt
+vfs-info
+exit

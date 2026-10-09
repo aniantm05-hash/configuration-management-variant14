@@ -22,6 +22,13 @@ class Stage4Tests(FixtureCase):
         self.assertTrue(shell.execute("who"))
         self.assertIn(getpass.getuser(), self.output[-1])
 
+    def test_main_installs_chown(self):
+        """The real entry point installs ownership changes."""
+        shell = create_shell(load_options(["--vfs", str(self.source)]))
+        shell.output = self.output.append
+        self.assertTrue(shell.execute("chown student /readme.txt"))
+        self.assertEqual(shell.vfs.get("/readme.txt").owner, "student")
+
     def test_binary_and_unterminated_counts(self):
         """Byte count accepts binary; lines count newline bytes."""
         self.assertEqual(

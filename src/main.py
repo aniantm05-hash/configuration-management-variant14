@@ -7,6 +7,7 @@ from .base_commands import install as install_basic
 from .config import load_options
 from .interface import TerminalWindow, cli
 from .loaders import load_vfs
+from .mutations import install as install_mutations
 from .services import install as install_services
 from .settings import GUI
 from .shell import Shell
@@ -20,6 +21,7 @@ def create_shell(options):
     shell.vfs = load_vfs(options.vfs)
     install_services(shell, options.vfs)
     install_basic(shell)
+    install_mutations(shell)
     return shell
 
 
