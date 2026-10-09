@@ -3,6 +3,7 @@
 import sys
 from pathlib import Path
 
+from .base_commands import install as install_basic
 from .config import load_options
 from .interface import TerminalWindow, cli
 from .loaders import load_vfs
@@ -18,6 +19,7 @@ def create_shell(options):
     shell = Shell(name)
     shell.vfs = load_vfs(options.vfs)
     install_services(shell, options.vfs)
+    install_basic(shell)
     return shell
 
 

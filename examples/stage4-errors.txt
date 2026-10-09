@@ -1,0 +1,21 @@
+# Ошибки не прекращают выполнение следующих команд
+ls -z
+ls /missing
+ls /docs /readme.txt
+cd /readme.txt
+cd /missing
+cd a b
+tail
+tail -n -1 /readme.txt
+tail -n abc /readme.txt
+tail /docs
+tail /binary.bin
+wc -z /readme.txt
+wc /missing
+wc /docs
+who extra
+unknown
+vfs-info extra
+exit extra
+vfs-info
+exit

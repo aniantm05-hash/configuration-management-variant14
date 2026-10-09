@@ -1,0 +1,21 @@
+# Основные команды: все поддерживаемые режимы
+ls
+ls -a
+ls -l
+ls -al /docs/notes/deep
+ls /readme.txt
+cd /docs
+cd notes/deep
+tail info.txt
+tail -n 2 info.txt
+tail -n 0 info.txt
+wc info.txt
+wc -l info.txt
+wc -w info.txt
+wc -c info.txt
+who
+cd ..
+cd
+cd ../../..
+vfs-info
+exit
